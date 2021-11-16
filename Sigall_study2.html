@@ -340,7 +340,7 @@ var Instr_gene_friends_part1_0 = {
     stimulus: function() {
       var html = "";
       html += "<h1>Study of accuracy in person perception: PART 1 (1/3) </h1>";
-      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully the labels and the information that we provide for the face: </b></p>";
+      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully and try to memorize the labels and the information that we provide for the face: </b></p>";
       html += "<p class='instructions'><table style='margin-left:auto;margin-right:auto'>" ;
       html += "<tr>" ;
       html += "This person is ";
@@ -349,9 +349,6 @@ var Instr_gene_friends_part1_0 = {
       html += "<td><img class='imgInstr' src='" + US[0] + "'></td>" ;
       html += "</tr>" ;
       html += "</table></p>" ;
-      html += "<p class='justify'><b>Please <u>remember this information and also remember which persons appear together on the screen</u>. You will need this information later on in the study.</b><br><br>"
-      html += "For each pair, we will present you <b><u>two potential reasons why these persons are friends.</b></u> ";
-      html += "Your task is to decide <b>which of the two is the more likely to explain why these persons are friends. </b><br><br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to begin</p>";
       return html;
     },
@@ -362,6 +359,7 @@ var Instr_gene_friends_part1_0 = {
     },
   };
 
+
 var Instr_gene_friends_part1_1 = {
     type: "html-keyboard-response",
     post_trial_gap: 300,
@@ -369,7 +367,7 @@ var Instr_gene_friends_part1_1 = {
     stimulus: function() {
       var html = "";
       html += "<h1>Study of accuracy in person perception: PART 1 (2/3) </h1>";
-      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully the labels and the information that we provide for the face: </b></p>";
+      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully and try to memorize the labels and the information that we provide for the face: </b></p>";
       html += "<p class='instructions'><table style='margin-left:auto;margin-right:auto'>" ;
       html += "<tr>" ;
       html += "This person is ";
@@ -378,9 +376,6 @@ var Instr_gene_friends_part1_1 = {
       html += "<td><img class='imgInstr' src='" + US[1] + "'></td>" ;
       html += "</tr>" ;
       html += "</table></p>" ;
-      html += "<p class='justify'><b>Please <u>remember this information and also remember which persons appear together on the screen</u>. You will need this information later on in the study.</b><br><br>"
-      html += "For each pair, we will present you <b><u>two potential reasons why these persons are friends.</b></u> ";
-      html += "Your task is to decide <b>which of the two is the more likely to explain why these persons are friends. </b><br><br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to begin</p>";
       return html;
     },
@@ -398,7 +393,7 @@ var Instr_gene_friends_part1_2 = {
     stimulus: function() {
       var html = "";
       html += "<h1>Study of accuracy in person perception: PART 1 (3/3) </h1>";
-      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully the labels and the information that we provide for the face: </b></p>";
+      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully and try to memorize the labels and the information that we provide for the face: </b></p>";
       html += "<p class='instructions'><table style='margin-left:auto;margin-right:auto'>" ;
       html += "<tr>" ;
       html += "This person is ";
@@ -407,9 +402,25 @@ var Instr_gene_friends_part1_2 = {
       html += "<td><img class='imgInstr' src='" + US[2] + "'></td>" ;
       html += "</tr>" ;
       html += "</table></p>" ;
-      html += "<p class='justify'><b>Please <u>remember this information and also remember which persons appear together on the screen</u>. You will need this information later on in the study.</b><br><br>"
-      html += "For each pair, we will present you <b><u>two potential reasons why these persons are friends.</b></u> ";
+      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to begin</p>";
+      return html;
+    },
+    on_load: function () {
+      //$('body').css({ "cursor": "none" });
+      $(".jspsych-content").css("margin-top", "50px");
+      $('.jspsych-content').css({ "max-width": "90%" });
+    },
+  };
+
+var Instr_gene_friends = {
+    type: "html-keyboard-response",
+    post_trial_gap: 300,
+    choices: [32],
+    stimulus: function() {
+      var html = "";
+      html += "<p class='justify'>For each pair, we will now present you <b><u>two potential reasons why these persons are friends.</b></u> ";
       html += "Your task is to decide <b>which of the two is the more likely to explain why these persons are friends. </b><br><br>";
+      html += "<b>Please <u>remember which persons appear together on the screen</u>. You will need this information later on in the study.</b><br><br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to begin</p>";
       return html;
     },
@@ -452,7 +463,7 @@ var Instr_gene_ennemies_part1_0 = {
     stimulus: function() {
       var html = "";
       html += "<h1>Study of accuracy in person perception: PART 1 (1/3) </h1>";
-      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully the labels and the information that we provide for the face: </b></p>";
+      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully and try to memorize the labels and the information that we provide for the face: </b></p>";
       html += "<p class='instructions'><table style='margin-left:auto;margin-right:auto'>" ;
       html += "<tr>" ;
       html += "This person is ";
@@ -461,9 +472,6 @@ var Instr_gene_ennemies_part1_0 = {
       html += "<td><img class='imgInstr' src='" + US[0] + "'></td>" ;
       html += "</tr>" ;
       html += "</table></p>" ;
-      html += "<p class='justify'><b>Please <u>remember this information and also remember which persons appear together on the screen</u>. You will need this information later on in the study.</b><br><br>"
-      html += "For each pair, we will present you <b><u>two potential reasons why these persons are enemies.</b></u> ";
-      html += "Your task is to decide <b>which of the two is the more likely to explain why these persons are enemies. </b><br><br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to begin</p>";
       return html;
     },
@@ -481,7 +489,7 @@ var Instr_gene_ennemies_part1_1 = {
     stimulus: function() {
       var html = "";
       html += "<h1>Study of accuracy in person perception: PART 1 (2/3) </h1>";
-      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully the labels and the information that we provide for the face: </b></p>";
+      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully and try to memorize the labels and the information that we provide for the face: </b></p>";
       html += "<p class='instructions'><table style='margin-left:auto;margin-right:auto'>" ;
       html += "<tr>" ;
       html += "This person is ";
@@ -490,9 +498,6 @@ var Instr_gene_ennemies_part1_1 = {
       html += "<td><img class='imgInstr' src='" + US[1] + "'></td>" ;
       html += "</tr>" ;
       html += "</table></p>" ;
-      html += "<p class='justify'><b>Please <u>remember this information and also remember which persons appear together on the screen</u>. You will need this information later on in the study.</b><br><br>"
-      html += "For each pair, we will present you <b><u>two potential reasons why these persons are enemies.</b></u> ";
-      html += "Your task is to decide <b>which of the two is the more likely to explain why these persons are enemies. </b><br><br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to begin</p>";
       return html;
     },
@@ -510,7 +515,7 @@ var Instr_gene_ennemies_part1_2 = {
     stimulus: function() {
       var html = "";
       html += "<h1>Study of accuracy in person perception: PART 1 (3/3) </h1>";
-      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully the labels and the information that we provide for the face: </b></p>";
+      html += "<p class='justify'>Here is the person that will be presented on the <u>"+USposition_between+"</u> (i.e., together with the face you will judge). Please, <b>read carefully and try to memorize the labels and the information that we provide for the face: </b></p>";
       html += "<p class='instructions'><table style='margin-left:auto;margin-right:auto'>" ;
       html += "<tr>" ;
       html += "This person is ";
@@ -519,9 +524,6 @@ var Instr_gene_ennemies_part1_2 = {
       html += "<td><img class='imgInstr' src='" + US[2] + "'></td>" ;
       html += "</tr>" ;
       html += "</table></p>" ;
-      html += "<p class='justify'><b>Please <u>remember this information and also remember which persons appear together on the screen</u>. You will need this information later on in the study.</b><br><br>"
-      html += "For each pair, we will present you <b><u>two potential reasons why these persons are enemies.</b></u> ";
-      html += "Your task is to decide <b>which of the two is the more likely to explain why these persons are enemies. </b><br><br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to begin</p>";
     },
     on_load: function () {
@@ -531,6 +533,24 @@ var Instr_gene_ennemies_part1_2 = {
     },
   };
 
+var Instr_gene_enemies = {
+    type: "html-keyboard-response",
+    post_trial_gap: 300,
+    choices: [32],
+    stimulus: function() {
+      var html = "";
+      html += "<p class='justify'>For each pair, we will now present you <b><u>two potential reasons why these persons are enemies.</b></u> ";
+      html += "Your task is to decide <b>which of the two is the more likely to explain why these persons are enemies. </b><br><br>";
+      html += "<b>Please <u>remember which persons appear together on the screen</u>. You will need this information later on in the study.</b><br><br>";
+      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to begin</p>";
+      return html;
+    },
+    on_load: function () {
+      //$('body').css({ "cursor": "none" });
+      $(".jspsych-content").css("margin-top", "50px");
+      $('.jspsych-content').css({ "max-width": "90%" });
+    },
+  };
 
 var Instr_gene_part2_0 = {
     type: "html-keyboard-response",
@@ -539,7 +559,7 @@ var Instr_gene_part2_0 = {
     stimulus: function() {
       var html = "";
       html += "<h1>Study of accuracy in person perception: PART 2 (1/3) </h1>";
-      html += "<p class='justify'>Now, your task is to <b>report several judgments on one particular person that was presented just before.</b> ";
+      html += "<p class='justify'>Now, your task is to <b>report several judgments on the person that was presented on the "+CSposition_between+" of the screen.</b> ";
       html += "<p class='justify'>To do so, you will evaluate that person on <b>42 personality traits or personality outcomes. </b><br><br>";
       html += "<b>Given that this study is on person perception, we are not interested in your tact, politeness, or other ";
       html += "factors that are usually important in everyday life situations. </br>";
@@ -556,7 +576,7 @@ var Instr_gene_part2_1 = {
     stimulus: function() {
       var html = "";
       html += "<h1>Study of accuracy in person perception: PART 2 (2/3) </h1>";
-      html += "<p class='justify'>Again, your task is to <b>report several judgments on one particular person that was presented just before.</b> ";
+      html += "<p class='justify'>Again, your task is to <b>report several judgments on the person that was presented on the "+CSposition_between+".</b> ";
       html += "Remember: It is extremely important that you try to answer <b> as honestly and as spontaneously as possible.</b></br></br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to begin</p>";
       return html;
@@ -570,7 +590,7 @@ var Instr_gene_part2_2 = {
     stimulus: function() {
       var html = "";
       html += "<h1>Study of accuracy in person perception: PART 2 (3/3) </h1>";
-      html += "<p class='justify'>Again, your task is to <b>report several judgments on one particular person that was presented just before.</b> ";
+      html += "<p class='justify'>Again, your task is to <b>report several judgments on the person that was presented on the "+CSposition_between+".</b> ";
       html += "Remember: It is extremely important that you try to answer <b> as honestly and as spontaneously as possible.</b></br></br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to begin</p>";
       return html;
@@ -1592,14 +1612,17 @@ switch(relation) {
     timeline.push(Instr_gene1,
                   Instr_gene_friends_part1,
                   Instr_gene_friends_part1_0,
+                  Instr_gene_friends,
                   evacond_friends_0,
                   Instr_gene_part2_0,
                   rating_0,
                   Instr_gene_friends_part1_1,
+                  Instr_gene_friends,
                   evacond_friends_1,
                   Instr_gene_part2_1,
                   rating_1,
                   Instr_gene_friends_part1_2,
+                  Instr_gene_friends,
                   evacond_friends_2,
                   Instr_gene_part2_2,
                   rating_2,
@@ -1621,14 +1644,17 @@ switch(relation) {
     timeline.push(Instr_gene1,
                   Instr_gene_ennemies_part1,
                   Instr_gene_ennemies_part1_0,
+                  Instr_gene_enemies,
                   evacond_ennemies_0,
                   Instr_gene_part2_0,
                   rating_0,
                   Instr_gene_ennemies_part1_1,
+                  Instr_gene_enemies,
                   evacond_ennemies_1,
                   Instr_gene_part2_1,
                   rating_1,
                   Instr_gene_ennemies_part1_2,
+                  Instr_gene_enemies,
                   evacond_ennemies_2,
                   Instr_gene_part2_2,
                   rating_2,
