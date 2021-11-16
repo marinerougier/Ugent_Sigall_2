@@ -301,7 +301,19 @@
       html += "on the basis of very little information</b>. The purpose of the present study is to have a better understanding ";
       html += "on <i>how</i> these impressions are formed and <i>when</i> they are accurate. </br> </br> ";
       html += "To do so, we will <b>compare your impressions of others with how these people truly behave in their everyday life</b>.<br><br> ";
-      html += "This study is divided into <b>two parts</b> and you will go through these two parts <b>three times in total.</b></br></br> ";
+      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to continue</p>";
+      return html;
+    },
+  };
+
+ var Instr_gene2 = {
+    type: "html-keyboard-response",
+    post_trial_gap: 300,
+    choices: [32],
+    stimulus: function() {
+      var html = "";
+      html += "<h1>Study of accuracy in person perception</h1>";
+      html += "<p class='justify'>This study is divided into <b>two parts</b> and you will go through these two parts <b>three times in total.</b></br></br> ";
       html += "In Part 1, we will show you the faces of two persons (i.e., a pair of faces) ";
       html += "with some additional information about <b>how these two persons are related to each other in real life. </b>";
       html += "Your task will be to <b>guess the specific reason why these two persons are related the way they are. </b><br><br>";
@@ -1611,6 +1623,7 @@ CS.map(function(ciImg){
 switch(relation) {
   case "friends":
     timeline.push(Instr_gene1,
+                  Instr_gene2,
                   Instr_gene_friends_part1,
                   Instr_gene_friends_part1_0,
                   evacond_friends_0,
@@ -1640,6 +1653,7 @@ switch(relation) {
     break;
   case "ennemies":
     timeline.push(Instr_gene1,
+                  Instr_gene2,
                   Instr_gene_ennemies_part1,
                   Instr_gene_ennemies_part1_0,
                   evacond_ennemies_0,
